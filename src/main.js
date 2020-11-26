@@ -32,7 +32,27 @@ export default class App {
 
 
     // Función que calcule el salario de un trabajador
+    calcularSalario(tipoTrabajador, horasTrabajadas){
+        
+        let salario;
 
+        switch(tipoTrabajador){
+            case 1:
+                salario = 20 * horasTrabajadas;
+                break;
+            case 2:
+                salario = 22 * horasTrabajadas;
+                break;
+            case 3:
+                salario = 25 * horasTrabajadas;
+                break
+            default:
+                salario = -1;
+        }
+
+        return salario;
+
+    }
 
     
     // Función que convierta una calificación en letra
@@ -65,7 +85,9 @@ console.log(app.esMultiplo(15, 3));
 console.log(app.esMultiplo(21, 9));
 
 // F3
-
+console.log(app.calcularSalario(1, 10));
+console.log(app.calcularSalario(3, 10));
+console.log(app.calcularSalario(2, 10));
 
 // F4
 
