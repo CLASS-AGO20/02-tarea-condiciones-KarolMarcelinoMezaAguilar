@@ -56,6 +56,29 @@ export default class App {
 
     
     // Función que convierta una calificación en letra
+    obtenerCalificacion(calificacionNumerica){
+
+        let letra;
+
+        if(calificacionNumerica >= 0 && calificacionNumerica <= 5){
+            letra = "C";
+        }else if(calificacionNumerica == 6){
+            letra = "B";
+        }else if(calificacionNumerica == 7){
+            letra = "B";
+        }else if(calificacionNumerica == 8){
+            letra = "A";
+        }else if(calificacionNumerica == 9){
+            letra = "A";
+        }else if(calificacionNumerica == 10){
+            letra = "A+";
+        }else{
+            letra = "ERROR";
+        }
+
+        return letra;
+
+    }
 
 
     // Función que diga el número más cercano a 100
@@ -90,7 +113,10 @@ console.log(app.calcularSalario(3, 10));
 console.log(app.calcularSalario(2, 10));
 
 // F4
-
+console.log(app.obtenerCalificacion(4));
+console.log(app.obtenerCalificacion(15));
+console.log(app.obtenerCalificacion(10));
+console.log(app.obtenerCalificacion(7));
 
 // F5
 
