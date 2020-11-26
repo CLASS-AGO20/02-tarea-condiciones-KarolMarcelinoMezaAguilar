@@ -16,6 +16,19 @@ export default class App {
     }
 
     // Función que determina si un número es múltiplo de otro
+    esMultiplo(numero1, numero2){
+
+        let multiplo;
+
+        if(numero1 % numero2 === 0){
+            multiplo = "true"
+        }else{
+            multiplo = "false"
+        }
+
+        return multiplo;
+
+    }
 
 
     // Función que calcule el salario de un trabajador
@@ -48,7 +61,8 @@ console.log(app.esPar(8));
 console.log(app.esPar(5));
 
 // F2
-
+console.log(app.esMultiplo(15, 3));
+console.log(app.esMultiplo(21, 9));
 
 // F3
 
